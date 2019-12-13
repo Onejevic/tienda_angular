@@ -1,0 +1,25 @@
+<div class="list-group">
+    <div class="row">
+        <div class="col">
+            <a *ngFor="let producto of productos" href="#" class="list-group-item list-group-item-action m-3">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Producto: {{producto.nombre}}</h5>
+                    <h6 class="mb-1">Total:{{producto.precio}}</h6>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <!-- <img src="../../../assets/img/aguacate.jpg" class="img-rounded" alt="Cinque Terre" width="100" height="100"> -->
+                        <img [src]="producto.img" class="card-img-top" [alt]="producto.nombre" class="img-rounded" alt="Cinque Terre" width="100" height="100">
+                    </div>
+                    <div class="col-6">
+                        <p class="mb-1">Descripción: {{producto.descripcion}}</p>
+                        <small class="text-muted">Cantidad: {{producto.unidades}}.</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <button type="button" (click)="actualizarProductos(productos2)" class="btn btn-primary btn-lg">Pagar</button>
+        </div>
+    </div>
+</div>
